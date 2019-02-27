@@ -1,0 +1,289 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CV.tex
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% See "README.md" for instructions on compiling this document.
+
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Xiangyong Wen}
+\newcommand{\CVTitle}{Xiangyong's CV}
+\newcommand{\CVNote}{CV compiled on {\today}}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+Yibin, Sichuan, China
+\par
+\href{mailto:1127395857@qq.com}
+{1127395857@qq.com}
+\,\SubBulletSymbol\,
++86-18576757213
+\,\SubBulletSymbol\,
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+{\textbf{Southwest Petroleum University}},
+Chengdu, Sichuan, China
+
+\Gap
+\BulletItem
+B.S. in
+\href{http://www.swpu.edu.cn/jdy/}
+{School of Mechanical Engineering}
+\hfill
+\DatestampYMD{2013}{09}{06} --
+\DatestampYMD{2018}{06}{21}
+\begin{Detail}
+\SubBulletItem
+Final year project:Path planning and Tracking of Autonomous Navigation Robot Based on Dynamic Target Detection
+\SubBulletItem
+Graduated with Outstanding Thesis Award.
+\SubBulletItem
+GPA(Grade Point Average): 2.81/5.0
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Research Interests %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Research Interests}
+{Research Interests}
+{PDF:Research Interests}
+
+\Entry
+\begin{Detail}
+Personally, I am very keen on working with robot. Due to the limited resources of the school, 
+I took a year out and then entered the DJI as an intern. During the internship, 
+from machine vision to robot path planning, the direction of research and development was gradually clarified, 
+also responsible for the path planning and decision-making of the RoboRTS framework. 
+In the future, I hope that the planning of the robot involves more semantics, making the planning more intelligent and more in line with the target task.
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Work EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Work Experience}
+{Work Experience}
+{PDF:Work Experience}
+
+\Entry
+\href{https://www.robomaster.com}
+{\textbf{DJI Algorithm Engineer}}
+Shenzhen, Guangdong, China
+\hfill
+\DatestampYMD{2018}{08}{30} --
+Now
+\begin{Detail}
+    Improve the RoboRTS framework. Participate in company projects, in this project I extract 3d-tof information, generate 2d cost maps to verify navigation party in a complex environment. 
+    And now plan to use the livox radar fusion vins to generate dense point clouds (hope to be familiar with 3d perception before starting 3d planning).
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Internship Experience %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Internship Experience}
+{Internship Experience}
+{PDF:Internship Experience}
+
+\Entry
+\href{https://www.robomaster.com}
+{\textbf{DJI Algorithm Engineer}}
+Shenzhen, Guangdong, China
+\hfill
+\DatestampYMD{2016}{07}{03} --
+\DatestampYMD{2018}{08}{29}
+
+\hfill
+\Entry
+\href{https://github.com/RoboMaster/RoboRTS}
+{\textbf{RoboRTS}}
+\hfill
+\DatestampYMD{2017}{08}{31} --
+\DatestampYMD{2018}{05}{01}
+\begin{Detail}
+    RoboRTS is an open source software stack for Real-Time Strategy research on mobile robots, 
+    developed by RoboMaster. The motivation for this project is RoboMaster AI Challenge. 
+    In this robot challenge, multiple robots should fight with each other on a game field automatically. 
+    It would be very convenient to have a unified framework for them to integrate hardware components and implement algorithms. 
+    This project is a team work with four algorithm engineers. 
+    My work in this project are things about motion planning and decision.
+\end{Detail}
+
+\BigGap
+
+\Entry
+\textbf{Projectile Trajectory Fitting}
+\hfill
+\DatestampYMD{2016}{12}{01} --
+\DatestampYMD{2017}{05}{31}
+\begin{Detail}
+    In order to improve the shooting accuracy of the RoboMaster mobile robot, I establish a projectile
+    trajectory fitting system, which can track projectile with binocular and then
+    obtain the trajectory of the projectile. After analyzing the trajectory, verify the Projectile equation, it can  then control the gimbal of the robot
+\end{Detail}
+
+\BigGap
+
+\Entry
+\textbf{Armor Detection}
+\hfill
+\DatestampYMD{2016}{09}{10} --
+\DatestampYMD{2016}{10}{31}
+\begin{Detail}
+    Detecting 2016 RoboMaster's robot armor, then calculate the position of the armor relative
+     to the camera and send to the STM32 to control the gimbal. 
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% CAMPUS ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Campus Activities}
+{Campus Activities}
+{PDF:CampusActivities}
+
+\Entry
+\textbf{Robotics Club},
+Southwest Petroleum University
+
+\Gap
+\BulletItem
+Project Manager ( 1 year) \& Group Leader ( 1 year) 
+\hfill
+\DatestampYMD{2014}{12}{15} --
+\DatestampYMD{2016}{06}{15}
+\begin{Detail}
+\SubBulletItem
+Organizing the Club, push the progress of project.
+\SubBulletItem
+Machine design for mobile robot with cero. Also write the control logical of the robot.
+\end{Detail}
+
+\Entry
+\textbf{Award}
+
+\Gap
+\BulletItem
+National First Prize in RoboMaster 2015
+
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+\BulletItem
+Chinese: Native language.
+
+\Gap
+\BulletItem
+English: CET-4.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Programming Skills %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Work Skills}
+{Work Skills}
+{PDF:Work Skills}
+
+\BulletItem
+C++,
+C, 
+Python,
+Matlab,
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\Section
+{Other Skills}
+{Other Skills}
+{PDF:Other Skills}
+
+\Entry
+cero, 
+CAD,
+
+\end{Body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+% \BigGap
+% \UseNoteFont%
+\null\hfill%
+% [\textit{\CVNote}]
+
+\end{document}
